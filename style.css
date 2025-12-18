@@ -1,0 +1,182 @@
+		@font-face {font-family: "Gasoek One";
+	    src: url("./font/GasoekOne-Regular.ttf") format("truetype");}
+
+		@font-face {font-family: "Song Myung";
+		    src: url("./font/SongMyung-Regular.ttf") format("truetype");}
+
+		@font-face {font-family: "Noto Sans KR";
+	    font-style: normal;
+	    font-weight: 100 900;
+	    src: url("./font/NotoSansKR-VariableFont_wght.ttf") format("truetype");}
+
+	    @font-face {font-family: "ClimateCrisisKR-1990";
+	    src: url("./font/ClimateCrisisKR-1979.otf") format("truetype");}
+	    @font-face {font-family: "ClimateCrisisKR-1990";
+	    src: url("./font/ClimateCrisisKR-1990.otf") format("truetype");}
+	    @font-face {font-family: "ClimateCrisisKR-2010";
+	    src: url("./font/ClimateCrisisKR-2010.otf") format("truetype");}
+	    @font-face {font-family: "ClimateCrisisKR-2030";
+	    src: url("./font/ClimateCrisisKR-2030.otf") format("truetype");}
+	    @font-face {font-family: "ClimateCrisisKR-2040";
+	    src: url("./font/ClimateCrisisKR-2040.otf") format("truetype");}
+
+
+		.mtitle{
+  		font-family: "ClimateCrisisKR-1979", sans-serif;
+  		  font-size: 130px;font-weight: 10; padding: 0px 0px -10px 0px; margin: 5px;}
+  		.m1title{
+  		font-family: "ClimateCrisisKR-1990", sans-serif;
+  		  font-size: 120px;font-weight: 10; padding: 0px 0px -10px 0px; margin: 5px;}
+  		.m2title{
+  		font-family: "ClimateCrisisKR-2010", sans-serif;
+  		  font-size: 100px;font-weight: 10; padding: 0px 0px -10px 0px; margin:5px;}
+  		  .m3title{
+  		font-family: "ClimateCrisisKR-2030", sans-serif;
+  		  font-size: 80px;font-weight: 10; padding: 0px 0px -10px 0px; margin: 5px;}
+  		.m4title{
+  		font-family: "ClimateCrisisKR-2040", sans-serif;
+  		  font-size: 60px;font-weight: 10; padding: 0px 0px 60px 0px; margin: 0px;}
+		.stitle{font-family: "Song Myung", serif;font-weight: 200;font-style: normal; padding: 30px; margin: 10px 10px 10px 10px;font-size: 40px; width: 60%; line-height: 1.2;}
+		.title{font-family: "Noto Sans KR", serif;font-weight: 780;font-style: normal; text-align: center; font-size: 55px; margin: 200px 100px; padding: 80px;}
+		.itle{font-family: "Noto Sans KR", serif;font-weight: 380;font-style: normal; text-align: center; font-size: 20px; padding: 35px;text-decoration : underline; color: dimgrey;}
+		.warp{width: auto; margin: 0px; padding: 90px 40px; background-color: black; color: white; overflow: hidden;}
+		.warp1{width: auto; margin: 0px 0px 280px 0px; padding: 100px 35px 300px 35px; background-color: black;}
+		.warp2{width: auto; margin: 0px; padding: 500px 40px; background-color: black; color: white; overflow: hidden;}
+		.center{justify-content: center;}
+		.img1{position:absolute; left: 270px; top: 20px; width: 1000px;}
+		.img{margin: 10px; padding: 30px;width: auto;}
+		.flex{display: flex; gap: 5px; justify-items: center;}
+		.right{text-align: right;}
+		.high{padding: 0px;}
+		.low{padding: 0px;}
+		.box{text-align: center; margin: auto; background-color:#fe2121; width: 50%; padding: 20px;}
+		.line{border: solid 6px; margin:0; padding: 20px 25px; border-radius: 30%}
+		.head{font-family: "ClimateCrisisKR-1990", serif;font-weight: 380;font-style: normal; text-align: center; font-size: 24px; padding: 15px 25px;}
+		.n{max-width: 50%}
+		.c {text-align: center;margin: 0 auto;}
+
+		.red-image img {
+		  filter: sepia(0) saturate(1);
+		  transition: filter 0.15s linear;
+		}
+
+		.thover {
+		  display: inline-block;
+		  white-space: normal;
+		  transition: transform 0.15s ease;}
+
+		.thover:hover {
+		  transform: scale(1.15); color: black;}
+
+		.scroll-img {
+		  display: block;
+		  margin: 0 auto;
+		  width: 300px;
+
+		  opacity: 0;
+		  transform: translateX(-30px);
+
+		  transition: all 1.2s ease-out;}
+
+		.scroll-img.active {
+		  opacity: 1;
+		  transform: translateX(0);}
+
+
+		.bar {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 64px;
+
+		  display: flex;
+		  align-items: center;
+		  padding: 0 24px;
+		  background: rgba(10, 10, 10, 0.5);
+		  backdrop-filter: blur(2px) saturate(300%);
+
+		  border-bottom: 1px solid rgba(10, 10, 10, 0.5);
+		  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+		  z-index: 1000;}
+		.bar::before {
+		  content: "";
+		  position: absolute;
+		  inset: 0;
+
+		  background-image: repeating-linear-gradient(
+		    45deg,
+		    rgba(255, 255, 255, 0.03) 0px,
+		    rgba(255, 255, 255, 0.03) 1px,
+		    transparent 1px,
+		    transparent 3px); pointer-events: none;}
+
+		@keyframes wiggle {
+		  0%   { transform: rotate(0deg); }
+		  15%  { transform: rotate(1.6deg); }
+		  25%  { transform: rotate(3.2deg); }
+		  50%  { transform: rotate(0deg); }
+		  65%  { transform: rotate(-1.6deg); }
+		  75%  { transform: rotate(-3.2deg); }
+		  100% { transform: rotate(0deg); }}
+		.decoration {
+		  width: 50%;
+		  animation: wiggle 1.2s ease-in-out infinite;}
+		.scroll-container {
+		  height: 100vh;
+		  overflow-y: scroll;
+		  scroll-snap-type: y mandatory;}
+		.lock-section {
+		width: auto;
+		  position: relative;
+		  overflow: hidden;
+		  justify-content: center;
+		  align-items: center;
+		  scroll-margin-top: 0;}
+
+		.panel {
+		  position: absolute;
+		  inset: 0;
+		  display: flex;
+		  justify-content: center;
+		  font-size: 3rem;
+		  background: black;
+		  color: white;
+
+		  opacity: 0;
+		  pointer-events: none;
+		  transition: opacity 0.6s ease;}
+
+		.panel.active {
+		  opacity: 1;
+		  pointer-events: auto;}
+
+		.scroll-line {
+		  position: fixed;
+		  top: 100%;
+		  left: 0;
+		  height: 4px;
+		  width: 0;
+		  background-color: white;
+		  transition: width 0.1s linear;
+}
+
+
+
+
+
+
+		html{scroll-behavior: smooth;}
+		h2, p, body{min-width: 400px}
+		h1{max-width: 980px}
+		h2, p{margin: 0; padding: 0; color: white;}
+		body{margin: 0; padding: 0; background:url(./img/pngl.png); background-attachment: fixed; background-size: cover; color: white;}
+		p{font-size: 18px; margin:10px; padding: 0px 30px; width: 900px; line-height: 1.6; font-family: "Noto Sans KR", sans-serif; font-weight: 420;
+			font-style: normal;-0.09rem;}
+		footer{margin: 0px 20px 100px 20px; padding: 0px 20px;font-family: "Noto Sans KR", sans-serif; font-weight: 600;
+			font-style: normal;}
+		a{font-size: 3.6rem; color: white; line-height: 1.6;text-decoration: none; transition: all 0.2s;}
+		a:hover{font-size: 4.3rem; color: black;}
+		a.link2:hover{color: black; font-size: 2rem}		
+		header{background: black;}
